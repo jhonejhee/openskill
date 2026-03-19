@@ -1,5 +1,3 @@
-<meta name="google-site-verification" content="J90NpwUePL1APZr-FxkC01RlF35tcIW8YjE6MIUphEc" />
-
 <div align="center">
 
 # openskill
