@@ -28,13 +28,13 @@ mkdir -p "$USER_PATH/references"
 
 # Fetch SKILL.md
 echo "⬇️  Fetching SKILL.md..."
-curl -fsSL "$RAW/openskill/SKILL.md" -o "$USER_PATH/SKILL.md"
+curl -fsSL "$RAW/SKILL.md" -o "$USER_PATH/SKILL.md"
 
 # Fetch reference files
 echo "⬇️  Fetching references..."
-curl -fsSL "$RAW/openskill/references/github-search.md" -o "$USER_PATH/references/github-search.md"
-curl -fsSL "$RAW/openskill/references/official-registry.md" -o "$USER_PATH/references/official-registry.md"
-curl -fsSL "$RAW/openskill/references/install-guide.md" -o "$USER_PATH/references/install-guide.md"
+curl -fsSL "$RAW/references/github-search.md" -o "$USER_PATH/references/github-search.md"
+curl -fsSL "$RAW/references/official-registry.md" -o "$USER_PATH/references/official-registry.md"
+curl -fsSL "$RAW/references/install-guide.md" -o "$USER_PATH/references/install-guide.md"
 
 echo ""
 echo "✅ openskill installed to $USER_PATH"
