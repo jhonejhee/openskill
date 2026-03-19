@@ -39,11 +39,18 @@
 
 ### Option A: Install via Claude (recommended)
 
-In any Claude session with file access, paste this prompt:
+**Claude.ai** — in any Claude session with file access, paste this prompt:
 
 ```
 Please install the openskill skill from https://github.com/jhonejhee/openskill
-Install it as user-scope so it's available in all my projects.
+into /mnt/skills/user/openskill so it's available in all my projects.
+```
+
+**Claude Code** — in any Claude Code session, paste this prompt:
+
+```
+Please install the openskill skill from https://github.com/jhonejhee/openskill
+into ~/.claude/skills/openskill so it's available in all my projects.
 ```
 
 ### Option B: Manual install (user-scope)
@@ -51,11 +58,22 @@ Install it as user-scope so it's available in all my projects.
 ```bash
 # Clone the repo
 git clone https://github.com/jhonejhee/openskill
-
-# Copy the skill to your Claude user skills directory
-cp -r openskill/openskill ~/.claude/skills/user/openskill
-# or wherever your Claude user skills are mounted
 ```
+
+**Claude Code:**
+```bash
+cp -r openskill/openskill ~/.claude/skills/openskill
+```
+
+**Claude.ai:**
+```bash
+cp -r openskill/openskill /mnt/skills/user/openskill
+```
+
+| Environment | Skills path |
+|---|---|
+| Claude Code | `~/.claude/skills/` |
+| Claude.ai | `/mnt/skills/user/` |
 
 ### Option C: Manual install (project-scope)
 
@@ -64,6 +82,8 @@ cp -r openskill/openskill ~/.claude/skills/user/openskill
 mkdir -p .claude/skills
 cp -r path/to/openskill/openskill .claude/skills/openskill
 ```
+
+> Project-scope works the same in both Claude Code and Claude.ai.
 
 ---
 
