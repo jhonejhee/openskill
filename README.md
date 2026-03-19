@@ -45,7 +45,7 @@
 
 ---
 
-## Installation
+## Installation - Claude Code
 
 ### Option A: Install via Claude (recommended)
 
@@ -86,6 +86,12 @@ cp -r openskill/openskill ~/.claude/skills/openskill
 mkdir -p .claude/skills
 cp -r openskill/openskill .claude/skills/openskill
 ```
+
+---
+
+## Installation - Claude AI
+
+**Download** `openskill` folder as a zip file and upload in claude.ai skills.
 
 ---
 
