@@ -1,7 +1,8 @@
-
+<meta name="google-site-verification" content="J90NpwUePL1APZr-FxkC01RlF35tcIW8YjE6MIUphEc" />
 
 <div align="center">
-<h1>openskill</h1>
+
+# openskill
 
 **`npm install`, but for Claude skills.**
 
@@ -45,19 +46,17 @@
 
 ---
 
-## Installation - Claude Code
+## Installation — Claude Code
 
 ### Option A: Install via Claude (recommended)
 
-**Claude Code** — in any Claude Code session, paste this prompt:
+In any Claude Code session, paste this prompt:
 
 ```
 Please clone https://github.com/jhonejhee/openskill and copy only the openskill/ folder into ~/.claude/skills/openskill.
 ```
 
 ### Option B: One-liner shell script
-
-Works for Claude Code:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/jhonejhee/openskill/main/install.sh | bash
@@ -66,12 +65,7 @@ curl -fsSL https://raw.githubusercontent.com/jhonejhee/openskill/main/install.sh
 ### Option C: Manual install (user-scope)
 
 ```bash
-# Clone the repo
 git clone https://github.com/jhonejhee/openskill
-```
-
-**Claude Code:**
-```bash
 cp -r openskill/openskill ~/.claude/skills/openskill
 ```
 
@@ -87,22 +81,31 @@ mkdir -p .claude/skills
 cp -r openskill/openskill .claude/skills/openskill
 ```
 
+> Project-scope installs only activate when Claude is used inside that project directory.
+
 ---
 
-## Installation - Claude AI
+## Installation — Claude.ai
 
-**Download** `openskill` folder as a zip file and upload in claude.ai skills.
+1. Download the `openskill/` folder from this repo as a zip
+   - Click **Code → Download ZIP**, then extract and locate the `openskill/` subfolder
+2. Go to [claude.ai](https://claude.ai) → **Settings → Skills**
+3. Click **Upload skill** and select the `openskill/` folder
+4. The skill will be available in all your Claude.ai sessions
 
 ---
 
 ## Getting Started
 
 Before using `/openskill`, set up your project context by running:
+
 ```
 /init
 ```
 
 This creates a `CLAUDE.md` in your project root — a file Claude reads to understand your stack, conventions, and installed skills. Once it exists, `/openskill` will use it to give you better, more relevant skill recommendations.
+
+---
 
 ## Usage
 
