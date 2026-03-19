@@ -1,6 +1,16 @@
-# openskill
 
-> A package manager for Claude skills. Project-aware skill discovery and interactive installer.
+
+<div align="center">
+<h1>openskill</h1>
+
+**`npm install`, but for Claude skills.**
+
+*Stop hunting for skills. Let your project tell you what it needs.*
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/jhonejhee/openskill/pulls)
+
+</div>
 
 ---
 
