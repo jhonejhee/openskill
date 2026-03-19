@@ -17,31 +17,12 @@ skills:
     path: public/pdf/
     tags: [documents, pdf, files]
 
-  # --- Design ---
-  - name: brand-spark
-    description: Generate detailed brand concepts with identity, visuals, packaging, and personality
-    repo: github.com/[your-org]/openskill
-    path: examples/brand-spark/
-    tags: [design, branding, identity]
-
-  - name: brand-generator
-    description: Quick brand concept generator for design practice
-    repo: github.com/[your-org]/openskill
-    path: examples/brand-generator/
-    tags: [design, branding, practice]
-
   # --- Development ---
   - name: frontend-design
     description: Build distinctive, production-grade frontend UI with high design quality
     repo: github.com/anthropics/claude-skills
     path: public/frontend-design/
     tags: [frontend, ui, design, react, css]
-
-  - name: fullstack-react-ai
-    description: Full-stack AI assistant for React-based projects including Next.js, Vite, and React Native
-    repo: github.com/[your-org]/openskill
-    path: examples/fullstack-react-ai/
-    tags: [frontend, backend, react, nextjs, fullstack]
 
   # --- Data ---
   - name: xlsx
@@ -66,6 +47,6 @@ skills:
 
   - name: openskill
     description: Project-aware skill discovery and package manager for Claude
-    repo: github.com/[your-org]/openskill
+    repo: github.com/jhonejhee/openskill
     path: openskill/
     tags: [meta, skills, package-manager]
