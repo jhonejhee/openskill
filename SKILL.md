@@ -47,10 +47,16 @@ Summarize what you found in 2–3 sentences before proceeding.
 Search for relevant skills across **three tiers in order**:
 
 #### Tier 1: Local Skills (check first)
-Scan these paths for already-available skills:
+First detect the environment: if `/mnt/skills/` exists, you're in Claude.ai. Otherwise assume Claude Code.
+
+**Claude.ai** — scan these paths:
 - `/mnt/skills/user/` — user-installed skills
 - `/mnt/skills/public/` — built-in public skills
 - `/mnt/skills/examples/` — example skills
+
+**Claude Code** — scan these paths:
+- `~/.claude/skills/` — user-installed skills
+- `.claude/skills/` — project-scoped skills (relative to project root)
 
 For each skill found, read only its **YAML frontmatter** (name + description). Do not load full SKILL.md bodies — just names and descriptions are enough for matching.
 
@@ -98,10 +104,12 @@ Ask the user which skills they want to install. Then ask:
 
 > "Install as **user-scope** (available in all your projects) or **project-scope** (this project only)?"
 
-| Scope | Path |
-|---|---|
-| User-scope | `/mnt/skills/user/[skill-name]/` |
-| Project-scope | `.claude/skills/[skill-name]/` (relative to project root) |
+| Scope | Claude.ai | Claude Code |
+|---|---|---|
+| User-scope | `/mnt/skills/user/[skill-name]/` | `~/.claude/skills/[skill-name]/` |
+| Project-scope | `.claude/skills/[skill-name]/` | `.claude/skills/[skill-name]/` |
+
+**Detect the environment first**: check if `/mnt/skills/` exists — if yes, you're in Claude.ai. Otherwise assume Claude Code and use `~/.claude/skills/`.
 
 For each selected skill:
 1. Copy or fetch the skill files to the chosen path
