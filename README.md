@@ -42,13 +42,13 @@
 **Claude.ai** — in any Claude session with file access, paste this prompt:
 
 ```
-Please fetch and install the openskill skill from https://github.com/jhonejhee/openskill directly into /mnt/skills/user/openskill using raw GitHub URLs. Do not use any other skills to do this.
+Please clone https://github.com/jhonejhee/openskill and copy only the openskill/ folder into /mnt/skills/user/openskill.
 ```
 
 **Claude Code** — in any Claude Code session, paste this prompt:
 
 ```
-Please fetch and install the openskill skill from https://github.com/jhonejhee/openskill directly into ~/.claude/skills/openskill using raw GitHub URLs. Do not use any other skills to do this.
+Please clone https://github.com/jhonejhee/openskill and copy only the openskill/ folder into ~/.claude/skills/openskill.
 ```
 
 ### Option B: One-liner shell script
@@ -86,7 +86,7 @@ cp -r openskill/openskill /mnt/skills/user/openskill
 ```bash
 # From your project root:
 mkdir -p .claude/skills
-cp -r path/to/openskill/openskill .claude/skills/openskill
+cp -r openskill/openskill .claude/skills/openskill
 ```
 
 > Project-scope works the same in both Claude Code and Claude.ai.
