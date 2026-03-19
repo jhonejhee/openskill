@@ -1,6 +1,6 @@
 ---
 name: openskill
-description: Project-aware skill discovery and installer for Claude projects. Use this skill whenever the user runs /openskill (with or without a scope like "frontend", "backend", "debug", "code-review", "api", "data", "infra", "testing"). Trigger on any message that starts with /openskill or asks to "find skills for my project", "install skills", "discover skills", or "what skills should I add". This is a package-manager-style interactive workflow — always use it for any skill installation or discovery request, even if the user just says "/openskill" with no arguments.
+description: Project-aware skill discovery and installer. ONLY trigger when the user explicitly types a message starting with /openskill — with or without a scope argument (e.g. "/openskill", "/openskill frontend", "/openskill backend"). Do NOT trigger for general questions about skills, installing tools, or project setup. Only the exact /openskill command invokes this skill.
 ---
 
 # OpenSkill — Project-Aware Skill Discovery & Installer
@@ -77,7 +77,7 @@ Check the official Anthropic skills repository if one exists. Search for `anthro
 
 ### Step 3 — Match & Recommend
 
-Match discovered skills to the project's stack and the requested scope. Present recommendations as a clean list:
+Match discovered skills to the project's stack and the requested scope. Present recommendations separated by source tier:
 
 ```
 📦 Recommended Skills for [Project Name / Scope]
@@ -85,16 +85,23 @@ Match discovered skills to the project's stack and the requested scope. Present 
 ✅ Already installed:
   - [skill-name] — [one-line description]
 
-🆕 Available to install:
-  1. [skill-name] (local) — [one-line description]
-  2. [skill-name] (community ⭐ 342) — [one-line description]
-  3. [skill-name] (official) — [one-line description]
+📁 Local (built-in):
+  1. [skill-name] — [one-line description]
+  2. [skill-name] — [one-line description]
+
+🌐 Community:
+  1. [skill-name] (⭐ 342) — [one-line description]
+  2. [skill-name] (⭐ 128) — [one-line description]
+
+🏢 Official:
+  1. [skill-name] — [one-line description]
+  2. [skill-name] — [one-line description]
 
 ❓ Possibly relevant (lower confidence):
   - [skill-name] — [one-line description]
 ```
 
-Aim for 3–7 strong recommendations. Don't overwhelm — curate.
+Max 5 per tier. Skip a tier entirely if nothing relevant is found — don't show empty sections.
 
 ---
 
