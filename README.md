@@ -49,12 +49,6 @@
 
 ### Option A: Install via Claude (recommended)
 
-**Claude.ai** — in any Claude session with file access, paste this prompt:
-
-```
-Please clone https://github.com/jhonejhee/openskill and copy only the openskill/ folder into /mnt/skills/user/openskill.
-```
-
 **Claude Code** — in any Claude Code session, paste this prompt:
 
 ```
@@ -63,7 +57,7 @@ Please clone https://github.com/jhonejhee/openskill and copy only the openskill/
 
 ### Option B: One-liner shell script
 
-Works for both Claude.ai and Claude Code — auto-detects your environment:
+Works for Claude Code:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/jhonejhee/openskill/main/install.sh | bash
@@ -81,15 +75,9 @@ git clone https://github.com/jhonejhee/openskill
 cp -r openskill/openskill ~/.claude/skills/openskill
 ```
 
-**Claude.ai:**
-```bash
-cp -r openskill/openskill /mnt/skills/user/openskill
-```
-
 | Environment | Skills path |
 |---|---|
 | Claude Code | `~/.claude/skills/` |
-| Claude.ai | `/mnt/skills/user/` |
 
 ### Option D: Manual install (project-scope)
 
@@ -98,8 +86,6 @@ cp -r openskill/openskill /mnt/skills/user/openskill
 mkdir -p .claude/skills
 cp -r openskill/openskill .claude/skills/openskill
 ```
-
-> Project-scope works the same in both Claude Code and Claude.ai.
 
 ---
 
