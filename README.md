@@ -67,6 +67,15 @@ cp -r path/to/openskill/openskill .claude/skills/openskill
 
 ---
 
+## Getting Started
+
+Before using `/openskill`, set up your project context by running:
+```
+/init
+```
+
+This creates a `CLAUDE.md` in your project root — a file Claude reads to understand your stack, conventions, and installed skills. Once it exists, `/openskill` will use it to give you better, more relevant skill recommendations.
+
 ## Usage
 
 Once installed, just type in any Claude session:
