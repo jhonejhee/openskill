@@ -42,18 +42,24 @@
 **Claude.ai** — in any Claude session with file access, paste this prompt:
 
 ```
-Please install the openskill skill from https://github.com/jhonejhee/openskill
-into /mnt/skills/user/openskill so it's available in all my projects.
+Please fetch and install the openskill skill from https://github.com/jhonejhee/openskill directly into /mnt/skills/user/openskill using raw GitHub URLs. Do not use any other skills to do this.
 ```
 
 **Claude Code** — in any Claude Code session, paste this prompt:
 
 ```
-Please install the openskill skill from https://github.com/jhonejhee/openskill
-into ~/.claude/skills/openskill so it's available in all my projects.
+Please fetch and install the openskill skill from https://github.com/jhonejhee/openskill directly into ~/.claude/skills/openskill using raw GitHub URLs. Do not use any other skills to do this.
 ```
 
-### Option B: Manual install (user-scope)
+### Option B: One-liner shell script
+
+Works for both Claude.ai and Claude Code — auto-detects your environment:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/jhonejhee/openskill/main/install.sh | bash
+```
+
+### Option C: Manual install (user-scope)
 
 ```bash
 # Clone the repo
@@ -75,7 +81,7 @@ cp -r openskill/openskill /mnt/skills/user/openskill
 | Claude Code | `~/.claude/skills/` |
 | Claude.ai | `/mnt/skills/user/` |
 
-### Option C: Manual install (project-scope)
+### Option D: Manual install (project-scope)
 
 ```bash
 # From your project root:
